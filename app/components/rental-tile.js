@@ -5,6 +5,9 @@ export default Ember.Component.extend({
   actions: {
     imageShow: function() {
       this.set('isImageShowing', true);
+    },
+    imageHide: function() {
+      this.set('isImageShowing', false);
     }
   }
 });
@@ -14,4 +17,4 @@ export default Ember.Component.extend({
 
 //actions object is a set of methods that can be triggered from the template using an {{action}}helper.
 //to set a property value in a component file to be used in view template file, use this.set('thingName', value);
-// don't forget the comma between the properties in a component js file.
+// don't forget the comma between the properties in a component js file. also between action methods.
