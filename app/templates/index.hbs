@@ -5,7 +5,7 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
   {{#each model as | modelElement |}}
-    <li>{{modelElement.owner}}'s {{modelElement.type}} in {{modelElement.city}}</li>
+    {{rental-tile rental=modelElement}}
   {{/each}}
 </ul>
 
