@@ -1,0 +1,13 @@
+<!-- I am the index route. I am special. no entry in router. default? -->
+<h1> Welcome to Super Rentals </h1>
+
+We hope you find exactly what you're looking for in a place to stay.
+
+<ul>
+  {{#each model as | modelElement |}}
+    <li>{{modelElement.owner}}'s {{modelElement.type}} in {{modelElement.city}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
