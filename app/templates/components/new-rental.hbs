@@ -1,0 +1,6 @@
+<!-- when you mention something in handlebars here without quotes like rental or addNewRental we are referring to a property of the component file.  -->
+{{#if addNewRental}}
+  <p>Display new rental form.</p>
+{{else}}
+  <button {{action 'rentalFormShow'}}>New Rental</button>
+{{/if}}
