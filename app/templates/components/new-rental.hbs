@@ -1,6 +1,33 @@
 <!-- when you mention something in handlebars here without quotes like rental or addNewRental we are referring to a property of the component file.  -->
 {{#if addNewRental}}
-  <p>Display new rental form.</p>
+  <h1>New Rental</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="owner">Owner</label>
+        {{input value=ownerParam id="owner"}}
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        {{input value=typeParam id="type"}}
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        {{input value=cityParam id="city"}}
+      </div>
+      <div class="form-group">
+        <label for="bedrooms">Number of Bedrooms</label>
+        {{input value=bedroomsParam id="bedrooms"}}
+      </div>
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=imageParam id="image"}}
+      </div>
+      <button {{action 'getParamsEmitSave'}}>Save</button>
+    </form>
+  </div>
 {{else}}
   <button {{action 'rentalFormShow'}}>New Rental</button>
 {{/if}}
+<!-- input helper for form inputs. id goes with label's 'for' attribute. value is what we use to save. -->
+<!-- click action on button triggers save1 in component. it emits params to parent route handler via template. -->
