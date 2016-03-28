@@ -5,7 +5,8 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
   {{#each model as | modelElement |}}
-    {{rental-tile rental=modelElement}}
+    {{rental-tile rental=modelElement destroyRental="destroyRental"}}
+    <!-- destroyRental is an output from the rental-tile component. triggering destroyRental method on this template's route handler. -->
   {{/each}}
 </ul>
 
