@@ -1,3 +1,11 @@
 <li>
   {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  {{#if isImageShowing}}
+    <p><img src={{rental.image}} alt={{rental.type}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Show image</button>
+  {{/if}}
 </li>
+<!-- #if: when isImageShowing is false, user sees button. true, they see image.  -->
+<!-- isImageShowing is a property on the component js file. -->
+<!-- {{action}} helper triggers a method on an action, by default click. method defined in component js file. -->
