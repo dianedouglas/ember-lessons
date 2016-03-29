@@ -1,2 +1,4 @@
 <!-- model hook returns a single record instead of all on this route. -->
 <h2>More information about {{model.owner}}'s {{model.type}}</h2>
+<!-- pass the model returned on this route into the 'rental' input on rental-detail component -->
+{{rental-detail rental=model}}
