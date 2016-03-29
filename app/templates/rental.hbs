@@ -1,4 +1,6 @@
 <!-- model hook returns a single record instead of all on this route. -->
 <h2>More information about {{model.owner}}'s {{model.type}}</h2>
 <!-- pass the model returned on this route into the 'rental' input on rental-detail component -->
-{{rental-detail rental=model}}
+{{rental-detail rental=model destroyRental="deleteRental"}}
+<!-- rental-detail component now has the delete button and a method in its routehandler to sendAction destroyRental. -->
+<!-- we need to pass the action up through the template to the route. this is the route for one rental, so we use this template. say destroyRental="destroyRental" and now we can have the actual destroyRental method here in rental.js cause this is a route. -->
