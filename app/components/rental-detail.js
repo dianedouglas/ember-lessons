@@ -6,6 +6,9 @@ export default Ember.Component.extend({
       if(confirm('ARe you sUrEE?')) {
         this.sendAction('destroyRental', rental);
       }
+    },
+    update: function(rental, params) {
+      this.sendAction('update', rental, params);
     }
   }
 });

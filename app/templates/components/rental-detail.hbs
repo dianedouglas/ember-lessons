@@ -3,4 +3,9 @@ Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is 
 <p>
   <img src={{rental.image}} alt={{rental.type}} />
 </p>
+
+<!-- move the update-rental component here. includes both the button to show the form, then the form with button to hide it again. in this component we have the call to sendAction upwards. -->
+<!-- update action in update-rental calls update action here in rental-detail, which passes it upwards to rental.js route. -->
+{{update-rental rental=rental update="update"}}
+
 <button {{action 'delete' rental}}>Delete</button>

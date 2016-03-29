@@ -13,14 +13,5 @@ export default Ember.Route.extend({
       newRental.save(); //also built in model method. don't just create it, save it. validation could come first.
       this.transitionTo('index'); //redirect to index.
     },
-    update(rental, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          rental.set(key,params[key]);
-        }
-      });
-      rental.save();
-      this.transitionTo('index');
-    },
   }
 });
