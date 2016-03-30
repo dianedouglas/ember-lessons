@@ -16,5 +16,10 @@ export default Ember.Route.extend({
       newRental.save(); //also built in model method. don't just create it, save it. validation could come first.
       this.transitionTo('index'); //redirect to index.
     },
+    saveTheCityToStore(cityParams) {
+      var newCity = this.store.createRecord('city', cityParams);
+      newCity.save();
+      this.transitionTo('index');
+    }
   }
 });
