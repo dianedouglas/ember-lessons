@@ -5,7 +5,10 @@ export default Ember.Route.extend({
   //model hook makes the rentals available to the route's corresponding template as the model property.
 //model data in a route handler is available to the templates and components that correspond to that route. puts the rentals into the context of the index.hbs template.
   model() {
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash({ //promises
+      cities: this.store.findAll('city'),
+      rentals: this.store.findAll('rental')
+    }); 
   },
   actions: {
     saveToStore(rentalInfo) {
